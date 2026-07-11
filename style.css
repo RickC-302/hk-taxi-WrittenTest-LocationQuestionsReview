@@ -1,0 +1,12 @@
+body { font-family: "Helvetica Neue", Arial, sans-serif; background: #f0f4f8; margin:0; }
+.container { max-width: 800px; margin: 40px auto; padding: 20px; background: white; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+h1 { text-align: center; color: #1a5f8a; }
+button { padding: 12px 24px; margin: 10px; font-size: 18px; border: none; border-radius: 8px; cursor: pointer; }
+button:hover { background: #1a5f8a; color: white; }
+.options { display: flex; flex-direction: column; gap: 12px; }
+.options button { background: #f8f9fa; border: 2px solid #ddd; text-align: left; padding: 15px; font-size: 17px; }
+.options button:hover { border-color: #1a5f8a; }
+.options button.correct { background: #d4edda; border-color: #28a745; }
+.options button.wrong { background: #f8d7da; border-color: #dc3545; }
+.hidden { display: none !important; }
+.progress { font-size: 18px; text-align: center; margin-bottom: 20px; color: #666; }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>的士筆試 - 地方試題溫習</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🚕 的士地方試題溫習（2016 Oct + 修訂版）</h1>
+    
+    <!-- 導航 -->
+    <div class="nav">
+      <button onclick="showScreen('start')">🏠 首頁</button>
+      <button onclick="startQuiz()">開始測驗</button>
+      <button onclick="showWrongBank()">📋 錯題庫 (<span id="wrong-count">0</span>)</button>
+    </div>
+
+    <!-- 首頁 -->
+    <div id="start-screen">
+      <p>總題目：359 題（已套用全部修訂）</p>
+      <button onclick="startQuiz()" style="font-size:22px;padding:15px 30px;">開始隨機測驗</button>
+    </div>
+
+    <!-- 測驗畫面 -->
+    <div id="quiz-screen" class="hidden">
+      <div class="progress">第 <span id="current">1</span> / <span id="total">0</span> 題</div>
+      <h2 id="question-text"></h2>
+      <div id="options" class="options"></div>
+      <button id="next-btn" onclick="nextQuestion()" class="hidden">下一題</button>
+    </div>
+
+    <!-- 答案結果畫面 -->
+    <div id="result-screen" class="hidden">
+      <h2 id="feedback"></h2>
+      <p id="correct-answer"></p>
+      <div id="map-container"></div>
+      <button onclick="nextQuestion()">繼續下一題</button>
+      <button onclick="restartQuiz()">重新開始</button>
+    </div>
+
+    <!-- 錯題庫畫面 -->
+    <div id="wrong-bank-screen" class="hidden">
+      <h2>📋 我的錯題庫（<span id="wrong-total">0</span> 題）</h2>
+      <div id="wrong-list"></div>
+      <button onclick="reviewAllWrong()">🔄 重溫全部錯題</button>
+      <button onclick="clearWrongBank()">🗑️ 清空錯題庫</button>
+      <button onclick="showScreen('start')">返回首頁</button>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
